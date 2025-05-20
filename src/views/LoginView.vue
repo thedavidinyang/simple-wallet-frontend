@@ -1,7 +1,7 @@
 <template>
   <div class="auth-container">
-    <h1>Login</h1>
     <form @submit.prevent="login">
+      <h1 class="center">Login</h1>
       <input type="email" class="form-control" placeholder="Email" v-model="email" required />
 
       <input
@@ -57,7 +57,14 @@ const login = async () => {
   }
 }
 </script>
+
 <style scoped>
+.center {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: #333;
+}
 .auth-container {
   max-width: 400px;
   margin: 60px auto;
@@ -85,11 +92,23 @@ const login = async () => {
   border-radius: 6px;
   font-size: 1rem;
   transition: border-color 0.2s;
+  margin-bottom: 1rem;
 }
 
 .form-control:focus {
   border-color: #007bff;
   outline: none;
+}
+
+.btn {
+  display: inline-block;
+  width: 50%;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
 }
 
 .btn-primary {
