@@ -16,6 +16,7 @@ import { isAuthenticated } from './stores/auth'
         <RouterLink v-if="!isAuthenticated" to="/register">Register</RouterLink>
         <RouterLink v-if="!isAuthenticated" to="/login">Login</RouterLink>
         <RouterLink v-if="isAuthenticated" to="/dashboard">Dashboard</RouterLink>
+        <RouterLink v-if="isAuthenticated" to="/creditwallet">Credit Wallet</RouterLink>
         <RouterLink v-if="isAuthenticated" to="/signout">Logout</RouterLink>
       </nav>
     </div>
