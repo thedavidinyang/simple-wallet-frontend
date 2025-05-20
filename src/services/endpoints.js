@@ -1,0 +1,8 @@
+export default {
+  login: '/auth/sign-in',
+  register: '/auth/sign-up',
+  logout: '/auth/sign-out',
+  wallet: '/user/profile/wallet',
+  transactions: '/user/transactions',
+  creditWallet: '/wallet/credit',
+}
