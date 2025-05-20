@@ -5,15 +5,15 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <div class="wrapper">
+    <div class="col-lg-9">
       <HelloWorld msg="simple wallet app" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/register">Register</RouterLink>
-        <RouterLink to="/login">Login</RouterLink>
-        <RouterLink to="/dashboard">Dashboard</RouterLink>
-        <RouterLink to="/signout">Logout</RouterLink>
+        <RouterLink v-if="!isAuthenticated" to="/">Home</RouterLink>
+        <RouterLink v-if="!isAuthenticated" to="/register">Register</RouterLink>
+        <RouterLink v-if="!isAuthenticated" to="/login">Login</RouterLink>
+        <RouterLink v-if="isAuthenticated" to="/dashboard">Dashboard</RouterLink>
+        <RouterLink v-if="isAuthenticated" to="/signout">Logout</RouterLink>
       </nav>
     </div>
   </header>
@@ -22,16 +22,6 @@ import HelloWorld from './components/HelloWorld.vue'
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
 nav {
   width: 100%;
   font-size: 12px;
@@ -62,16 +52,6 @@ nav a:first-of-type {
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
   }
 
   nav {
