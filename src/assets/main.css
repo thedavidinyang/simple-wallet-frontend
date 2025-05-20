@@ -101,3 +101,19 @@ a,
 .btn-primary:hover {
   background: #0056b3;
 }
+
+.black {
+  color: #000;
+}
+.white {
+  color: #fff;
+}
+.red {
+  color: #ff0000;
+}
+.blue {
+  color: #0000ff;
+}
+.green {
+  color: #008000;
+}

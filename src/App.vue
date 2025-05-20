@@ -3,7 +3,7 @@ import { RouterLink, RouterView, useRouter } from 'vue-router'
 import { computed } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 
-const isAuthenticated = computed(() => !!localStorage.getItem('token'))
+import { isAuthenticated } from './stores/auth'
 </script>
 
 <template>

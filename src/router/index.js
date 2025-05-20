@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { setAuth } from '../stores/auth'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,7 +32,7 @@ const router = createRouter({
       path: '/signout',
       name: 'signout',
       beforeEnter: (to, from, next) => {
-        localStorage.removeItem('token')
+        setAuth(null)
         import('@pnotify/core').then(({ alert }) => {
           alert({
             title: 'Signed Out',

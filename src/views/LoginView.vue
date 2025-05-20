@@ -22,6 +22,7 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import api from '../services/api'
 import endpoints from '../services/endpoints'
+import { setAuth } from '../stores/auth'
 
 import { alert, success } from '@pnotify/core'
 import '@pnotify/core/dist/PNotify.css'
@@ -38,7 +39,7 @@ const login = async () => {
       password: password.value,
     })
 
-    localStorage.setItem('token', response.data.token)
+    setAuth(response.data.token)
 
     success({
       text: 'Login successful!',
