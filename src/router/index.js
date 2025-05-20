@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { setAuth } from '../stores/auth'
+import api from '../services/api'
 
 const router = createRouter({
-  history: createWebHistory(window.env.VITE_API_BASE_URL),
+  history: createWebHistory(api.baseURL),
   // history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {

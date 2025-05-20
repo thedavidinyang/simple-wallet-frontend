@@ -3,6 +3,7 @@ import { ref, onMounted, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import api from '../services/api'
 import endpoints from '../services/endpoints'
+import monify from '../services/monify'
 import { setAuth } from '../stores/auth'
 import { alert, success } from '@pnotify/core'
 
@@ -108,9 +109,9 @@ function launchMonnify() {
     reference: String(Date.now()),
     customerFullName: 'Wallet User',
     customerEmail: 'user@email.com',
-    apiKey: window.env.VITE_API_BASE_URL,
+    apiKey: monify.ApiKey,
     // apiKey: import.meta.env.VITE_MONNIFY_API_KEY,
-    contractCode: window.env.VITE_MONNIFY_CONTRACT_CODE,
+    contractCode: monify.ContractCode,
     // contractCode: import.meta.env.VITE_MONNIFY_CONTRACT_CODE,
     paymentDescription: 'Wallet Credit',
     metadata: {
