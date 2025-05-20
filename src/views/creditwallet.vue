@@ -108,9 +108,9 @@ function launchMonnify() {
     reference: String(Date.now()),
     customerFullName: 'Wallet User',
     customerEmail: 'user@email.com',
-    apiKey: window.env.VITE_API_BASE_URL;,
+    apiKey: window.env.VITE_API_BASE_URL,
     // apiKey: import.meta.env.VITE_MONNIFY_API_KEY,
-    contractCode: window.env.VITE_MONNIFY_CONTRACT_CODE;,
+    contractCode: window.env.VITE_MONNIFY_CONTRACT_CODE,
     // contractCode: import.meta.env.VITE_MONNIFY_CONTRACT_CODE,
     paymentDescription: 'Wallet Credit',
     metadata: {
