@@ -7,7 +7,7 @@ import App from './App.vue'
 import router from './router'
 
 import '@pnotify/core/dist/PNotify.css'
-import '@pnotify/bootstrap4/dist/PNotifyBootstrap4.css'
+import '@pnotify/core/dist/BrightTheme.css'
 const app = createApp(App)
 
 app.use(createPinia())

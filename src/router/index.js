@@ -29,7 +29,7 @@ const router = createRouter({
       meta: { requiresAuth: true },
     },
     {
-      path: '/credit-wallet',
+      path: '/creditwallet',
       name: 'creditwallet',
       component: () => import('../views/creditwallet.vue'),
       meta: { requiresAuth: true },

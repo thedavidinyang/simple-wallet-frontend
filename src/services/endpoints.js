@@ -3,5 +3,5 @@ export default {
   register: '/auth/sign-up',
   wallet: '/user/profile/wallet',
   transactions: '/user/transactions',
-  creditWallet: '/wallet/credit',
+  creditWallet: '/user/transactions/verify',
 }
