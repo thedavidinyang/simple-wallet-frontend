@@ -5,7 +5,7 @@
         <div class="card">
           <div class="card-header"></div>
           <div class="card-body">
-            <h1>Welcome</h1>
+            <h1 class="center">Welcome</h1>
           </div>
         </div>
       </div>
